@@ -1,0 +1,492 @@
+
+
+/* 
+ * minimal base styles 
+ */
+
+
+body, select, input, textarea ,button{ 
+  /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */ 
+  color: #444; 
+  /* set your base font here, to apply evenly */
+  /* font-family: Georgia, serif;  */   
+}
+
+/* Headers (h1,h2,etc) have no default font-size or margin,
+   you'll want to define those yourself. */ 
+h1,h2,h3,h4,h5,h6 { font-weight: bold; }
+
+/* always force a scrollbar in non-IE */ 
+html { overflow-y: scroll; }
+
+ 
+a, a:active, a:visited { color: #607890; }
+a:hover { color: #036; }
+
+
+
+small { font-size: 85%; }
+strong, th { font-weight: bold; }
+
+td, td img { vertical-align: top; } 
+
+sub { vertical-align: sub; font-size: smaller; }
+sup { vertical-align: super; font-size: smaller; }
+
+textarea { overflow: auto; } 
+
+.ie6 legend, .ie7 legend { margin-left: -7px; }
+
+/* align checkboxes, radios, text inputs with their label
+   by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+
+/* hand cursor on clickable input elements */
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+ 
+/* webkit browsers add a 2px margin outside the chrome of form elements */  
+/*button, input, select, textarea { margin: 0; }*/
+
+/* colors for form validity */
+input:valid, textarea:valid   {  }
+input:invalid, textarea:invalid { 
+      border-radius: 1px;
+    -moz-box-shadow: 0px 0px 5px red; 
+ -webkit-box-shadow: 0px 0px 5px red; 
+         box-shadow: 0px 0px 5px red;
+}
+.no-boxshadow input:invalid, 
+.no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+
+
+
+ /* Primary Styles
+    Author: 
+ */
+
+@font-face {
+	font-family: GraublauWeb;
+	src: url("../Fonts/GraublauWeb.otf") format("opentype");
+}
+
+@font-face {
+	font-family: Bell Gothic Std;
+	font-weight:bold;
+	src: url("../Fonts/BellGothicStd-Bold.otf") format("opentype");
+}
+
+form {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	text-align: center;
+	font-size: 12px;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	line-height: 1.7;
+	margin: 0;
+	color:#555555;
+	background:url(../images/bg.jpg);
+}
+
+button {
+    
+    font-size: 10pt;
+    color: #666;
+    letter-spacing: normal;
+    text-indent: 0;
+    text-shadow: 0 1px 0 hsla(0,0%,100%,.75);
+    margin: 10px 2px;
+}
+
+/****** Images ******/
+
+img { border: 0 none; }
+
+
+/****** Links ******/
+
+a:link, a:visited {
+	text-decoration: none;
+	font-weight: normal;
+	color:#7095c8;
+	font-weight:bold;
+}
+
+a:hover {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+
+
+
+
+
+/* Button */
+button, .button ,input[type="button"]{
+    background-color: #f4f4f4;
+    background-image: -webkit-linear-gradient(90deg, hsla(0,0%,0%,.05), hsla(0,0%,0%,.01));
+    box-shadow: inset 0 1px 0 hsla(0,0%,100%,.25),
+                0 1px 2px hsla(0,0%,0%,0.5);
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    height: 32px;
+    padding: 0 30px 4px 30px;
+    -webkit-transition: .1s;
+
+    
+    
+    width:83px;
+	
+    display: inline-block;
+}
+button:hover, .button:hover, input[type="button"]:hover {
+    background-image: -webkit-linear-gradient(90deg, hsla(0,0%,0%,.08),hsla(0,0%,0%,.03));
+}
+button:active, .button:active, input[type="button"]:active {
+    background-image: -webkit-linear-gradient(90deg, hsla(0,0%,0%,.15), hsla(0,0%,0%,.12));
+    color: #333;
+    text-shadow: 0 1px 0 hsla(0,0%,100%,.25);
+}
+button.threeD, .button .threeD ,input[type="button"].threeD a {
+    box-shadow: inset 0 1px 0 hsla(0,0%,100%,.25),
+                inset 0 -3px 0 hsla(0,0%,0%,.15),
+                0 1px 2px hsla(0,0%,0%,0.5);
+    height: 32px;
+	
+}
+button.threeD:active, .button .threeD:active ,input[type="button"].threeD:active {
+    box-shadow: inset 0 1px 0 hsla(0,0%,100%,.25),
+                inset 0 -1px 0 hsla(0,0%,0%,.3),
+                0 1px 2px hsla(0,0%,0%,0.75);
+    position: relative;
+    top: 1px;
+    height: 31px;
+}
+
+/* Range Slide */
+input[type="range"] {
+    background-color: #666;
+    background-image: -webkit-linear-gradient(90deg, hsla(0,0%,0%,.1), hsla(0,0%,0%,.35));
+    box-shadow: inset 0 1px 0 hsla(0,0%,0%,.5),
+                0 1px 0 hsla(0,0%,100%,0.75);
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    position: relative;
+    top: -2px;
+    left: 4px;
+    height: 4px;
+    width: 280px;
+    -webkit-appearance: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+    background-color: #f4f4f4;
+    background-image: -webkit-linear-gradient(90deg, hsla(0,0%,0%,.05), hsla(0,0%,0%,.01));
+    background-size: 16px 16px;
+    box-shadow: inset 0 1px 0 hsla(0,0%,100%,.5),
+                0 1px 2px hsla(0,0%,0%,0.5);
+    content: '';
+    display: block;
+    border: none;
+    border-radius: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 12px;
+    width: 12px;
+    -webkit-appearance: none;
+}
+input[type="range"]::-webkit-slider-thumb:after {
+    background-color: #999;
+    background-image: -webkit-linear-gradient(90deg, hsla(0,0%,0%,.25), hsla(0,0%,0%,0));
+    box-shadow: inset 0 1px 0 hsla(0,0%,0%,.75),
+                0 1px 0 hsla(0,0%,100%,0.75);
+    content: '';
+    display: block;
+    border: none;
+    border-radius: 100%;
+    position: relative;
+    top: 4px;
+    left: 4px;
+    height: 4px;
+    width: 4px;
+}
+input[type="range"]:hover::-webkit-slider-thumb:after {
+    background-color: #008aff;
+    box-shadow: inset 0 1px 0 hsla(0,0%,0%,.5),
+                0 1px 0 hsla(0,0%,100%,0.5),
+                0 0 3px #008aff;
+}
+input[type="range"].range2::before, input[type="range"].range2::after {
+    background: -webkit-linear-gradient(0deg, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,0) 98%, hsla(0,0%,0%,.85) 99%),
+    -webkit-linear-gradient(0deg, hsla(0,0%,0%,.85) 1%, hsla(0,0%,0%,0) 2%);
+    background-size: 20% 100%, 20% 100%;
+    background-repeat: repeat, no-repeat;
+    content: '';
+    display: block;
+    border: none;
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    height: 4px;
+    width: 97%;
+}
+input[type="range"].range2::before { top: -7px;}
+input[type="range"].range2::after { top: 7px; z-index: -1;}
+
+/* Input Text */
+input[type="text"], textarea {
+    background-color: #eee;
+    box-shadow: inset 0 1px 1px hsla(0,0%,0%,.35),
+                0 1px 0 hsla(0,0%,100%,.75);
+    border-radius: 3px;
+    border: none;
+    padding: 0 12px 0 12px;  
+}
+input[type="text"] {
+    height: 32px;
+    width: 50em; /* option */
+}
+
+/****** Text ******/
+
+p { margin-top: 0; margin-bottom: 10px; }
+
+/****** Headers ******/
+
+h1 {
+	font-family:Bell Gothic Std, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:28px;
+	color:#242424;
+	width:100%;
+	text-shadow: 1px 1px #FFF;
+}
+
+h2 {
+	font-size:18px;
+	font-family:Bell Gothic Std, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#242424;
+	width:100%;
+	text-shadow: 1px 1px #FFF;
+	background:url(../images/h2_bg.jpg) top left no-repeat;
+	padding:0px 0px 30px 33px;
+	margin:0;
+}
+
+h3 {
+	font-size:18px;
+	font-family:Bell Gothic Std, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#242424;
+	width:100%;
+	text-shadow: 1px 1px #FFF;
+	padding:0px 0px 30px 0px;
+	margin:0;
+}
+
+h4 {
+	font-size:14px;
+	font-family:Bell Gothic Std, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#242424;
+	width:100%;
+	text-shadow: 1px 1px #FFF;
+	padding:0px 0px 10px 0px;
+	margin:0;
+}
+
+/****** Main ******/
+
+
+
+/*** Wrappers ***/
+
+#wrapper {
+	background: url(../images/mainBG.png) top center no-repeat;
+}
+
+#wrapper2 {
+    min-height:500px;
+	background:url(../images/footer_bg.png) bottom center repeat-x;
+}
+
+#container {
+	width:1000px;
+    min-height:800px;
+	margin:0 auto;
+	padding:150px 0px 0px 0px;
+	text-align:left;
+}
+
+.clear {
+	clear:both;
+}
+
+.seperator {
+	width:1000px;
+	background:url(../images/seperator.jpg);
+	height:18px;
+	margin:36px 0px;
+	clear:both;
+}
+
+#main {
+	width:1000px;
+}
+
+
+/*** Header **/
+
+header {
+	width:1000px;
+	height:131px;
+	padding:0px 0px 100px 0px;
+}
+
+#logo {
+	float:left;
+	width:134px;
+	height:131px;
+}
+
+#tagline {
+	float:right;
+	width:866px;
+	text-align:center;
+}
+
+#searchBar {
+	float:left;
+	width:866px;
+	height:131px;
+    
+    
+}
+
+#searchInput {
+	float:left;
+	width:83px;
+	height:32px;
+	padding:10px 10px 0px 50px;
+    padding-right: .1em;
+}
+
+#searchButton {
+    
+	float:right;
+	
+    width: 83px;
+	height:32px;
+    
+	
+}
+
+
+
+
+
+/*** Footer ***/
+
+footer {
+    min-height:1000px;
+	width:1000px;
+}
+
+#copyright {
+	float:left;
+	color:#33b5e5;
+	padding:50px 0px 20px 0px;
+}
+
+#goingup {
+	float:right;
+	padding:5px 180px 0px 0px;
+}
+
+
+
+.ac_results {
+	padding: 0px;
+	border: 1px solid #ff7c08;
+	background-color: white;
+	overflow: hidden;
+}
+
+.ac_results ul {
+	width: 100%;
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	
+}
+
+.ac_results li {
+	margin: 0px;
+	padding: 2px 5px;
+	cursor: default;
+	display: block;
+	color: #972800;
+	font-family:Arial, Helvetica, sans-serif;
+	/* 
+	if width will be 100% horizontal scrollbar will apear 
+	when scroll mode will be used
+	*/
+	/*width: 100%;*/
+	font-size: 12px;
+	/* 
+	it is very important, if line-height not setted or setted 
+	in relative units scroll will be broken in firefox
+	*/
+	line-height: 16px;
+	overflow: hidden;
+	
+	outline: none;
+                display: block;
+                position: relative;
+                margin: 0;
+                padding: 8px 20px;
+                text-decoration: none;
+}
+
+.ac_loading {
+	background: white url('../images/indicator.gif') right center no-repeat;
+}
+
+.ac_odd {
+	background-color: #fff;
+}
+
+.ac_over {
+	background: #4fbdf0;
+        border-color: #4fbdf0;
+}
+
+
+.input_text{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	border:1px solid #FF7C08;
+	padding:2px;
+	width:150px;
+	color:#802900;
+	padding-left:17px;
+}
+
+
+
+
+
+
+
+

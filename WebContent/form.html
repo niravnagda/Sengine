@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Contact Us</title>
+	<link rel="stylesheet" type="text/css" href="view.css" media="all">
+		<script type="text/javascript" src="view.js"></script>
+		<script type="text/javascript">
+			function thanks() {
+				if (validateForm()) {
+					alert("Thank you for your feedback");
+					location = "http://www.utdallas.edu/~yxw126830/sengine/sengine.html"
+				}
+			}
+			function validateForm() {
+				var first_name = document.forms["form_530892"]["element_2_1"].value;
+				var last_name = document.forms["form_530892"]["element_2_2"].value;
+
+				if (first_name == null || last_name == null || first_name == ""
+						|| last_name == "") {
+					alert("Name must be filled out");
+					return false;
+				}
+				var email = document.forms["form_530892"]["element_3"].value;
+				if (email == null || email == "") {
+					alert("email must be filled out");
+					return false;
+				}
+				var message = document.forms["form_530892"]["element_4"].value;
+				if (message == null || message == "") {
+					alert("Message must be filled out");
+					return false;
+				}
+				return true;
+			}
+		</script>
+</head>
+<body id="main_body">
+	<img id="top" src="top.png" alt="">
+
+		<div id="Logo_Sengine" style="margin-left: 50px;">
+			<a href="http://www.utdallas.edu/~yxw126830/sengine/sengine.html"><img
+				src="Logo.JPG" alt="Sengine" height="75" width="150" align="left"></a>
+		</div>
+		<div id="form_container">
+			<h1>
+				<a>Contact Us</a>
+			</h1>
+			<form id="form_530892" class="appnitro" enctype="multipart/form-data"
+				method="post" action="">
+				<div class="form_description">
+					<h2>Contact Us</h2>
+					<p>Let us know your suggestions, feedback, queries.</p>
+				</div>
+
+				<ul>
+
+					<li id="li_2"><label class="description" for="element_2">Name*
+					</label> <span> <input id="element_2_1" name="element_2_1"
+							class="element text" maxlength="255" size="8" value="" /> <label>First</label>
+					</span> <span> <input id="element_2_2" name="element_2_2"
+							class="element text" maxlength="255" size="14" value="" /> <label>Last</label>
+					</span></li>
+					<li id="li_3"><label class="description" for="element_3">Email*
+					</label>
+						<div>
+							<input id="element_3" name="element_3"
+								class="element text medium" type="text" maxlength="255" value="" />
+						</div>
+						<p class="guidelines" id="guide_5">
+							<small>Enter you email id so that we can get back to you.</small>
+						</p></li>
+					<li id="li_4"><label class="description" for="element_4">Message*
+					</label>
+						<div>
+							<textarea id="element_4" name="element_4"
+								class="element textarea medium"></textarea>
+						</div>
+						<p class="guidelines" id="guide_5">
+							<small>Please write your comments here</small>
+						</p></li>
+					<li id="li_5"><label class="description" for="element_5">Upload
+							a File </label>
+						<div>
+							<input id="element_5" name="element_5" class="element file"
+								type="file" />
+						</div>
+						<p class="guidelines" id="guide_5">
+							<small>If you have a screenshot it would really help us.</small>
+						</p></li>
+
+					<li class="buttons"><input type="hidden" name="form_id"
+						value="530892" /> <input id="saveForm" class="button_text"
+						type="submit" name="submit" value="Submit" onclick="thanks()" /></li>
+				</ul>
+			</form>
+			<div id="footer">
+				Copyright by <a
+					href="http://www.utdallas.edu/~yxw126830/sengine/sengine.html">
+					Sengine</a>
+			</div>
+		</div> <img id="bottom" src="bottom.png" alt="">
+</body>
+</html>
